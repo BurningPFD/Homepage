@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的个人主页</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f3ef;
+        --text: #202124;
+        --muted: #5f6368;
+        --line: #d8d2c8;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+          "PingFang SC", "Microsoft YaHei", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      header {
+        padding-bottom: 36px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--accent-dark);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 760px;
+        font-size: clamp(40px, 8vw, 76px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 680px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 20px;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 32px;
+        padding: 34px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .content {
+        display: grid;
+        gap: 16px;
+        color: #34373b;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      a {
+        color: var(--accent-dark);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      footer {
+        padding-top: 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          width: min(100% - 28px, 920px);
+          padding: 48px 0;
+        }
+
+        section {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .intro {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Personal Website</p>
+        <h1>你好，我是你的名字。</h1>
+        <p class="intro">
+          这里是一句话介绍你自己。你可以写研究方向、作品、兴趣，或者任何你想公开展示的内容。
+        </p>
+      </header>
+
+      <section>
+        <h2>关于我</h2>
+        <div class="content">
+          <p>
+            在这里放你的个人简介。先不用写得完美，网页公开之后也可以随时更新。
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>项目</h2>
+        <div class="content">
+          <p>
+            可以列出你的作品、课程项目、研究经历、文章或其他链接。
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>联系</h2>
+        <div class="content">
+          <p>把邮箱、GitHub、LinkedIn 或其他公开联系方式放在这里。</p>
+          <div class="links">
+            <a class="button" href="mailto:your-email@example.com">Email</a>
+            <a href="https://github.com/your-username">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>© 2026 你的名字</footer>
+    </main>
+  </body>
+</html>
